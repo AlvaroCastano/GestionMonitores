@@ -1,0 +1,15 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+    </package>
+    <package name="com.controladores.gestionmonitores" namespace="/" extends="struts-default">
+        <action class="com.controladores.gestionmonitores.LoginControl" name="login" method="ejecutarLogin">
+            <result name="success">/vistas/login.jsp</result>
+        </action>
+    </package>
+</struts>
