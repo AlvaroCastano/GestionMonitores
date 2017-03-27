@@ -7,6 +7,11 @@
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
+DROP DATABASE IF EXISTS gestionmonitores;
+CREATE DATABASE IF NOT EXISTS gestionmonitores;
+GRANT ALL PRIVILEGES ON gestionmonitores.* TO 'admin'@'localhost';
+FLUSH PRIVILEGES;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -35,7 +40,7 @@ CREATE TABLE `tbl_docentes` (
   `fechaNacimiento` date DEFAULT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbl_docentes`
@@ -60,7 +65,7 @@ CREATE TABLE `tbl_estudiantes` (
   `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `telefono` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `direccion` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbl_estudiantes`

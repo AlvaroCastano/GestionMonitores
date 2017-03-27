@@ -46,7 +46,7 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gestionmonitores?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">admin</property>
     <property name="hibernate.connection.password">admin</property>
-    <mapping resource="com/modelos/gestionmonitores/TblEstudiantes.hbm.xml"/>
-    <mapping resource="com/modelos/gestionmonitores/TblDocentes.hbm.xml"/>
+    <mapping resource="com/entidades/gestionmonitores/TblDocentes.hbm.xml"/>
+    <mapping resource="com/entidades/gestionmonitores/TblEstudiantes.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

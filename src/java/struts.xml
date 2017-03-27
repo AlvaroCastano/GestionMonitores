@@ -3,13 +3,10 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
-        
-    </package>
-    <package name="com.controladores.gestionmonitores" namespace="/" extends="struts-default">
-        <action class="com.controladores.gestionmonitores.LoginControl" name="login" method="ejecutarLogin">
-            <result name="success">/vistas/login.jsp</result>
+        <action name="login" class="com.dao.gestionmonitores.LoginAction">
+            <result name="success">/vistas/GUIDocente.jsp</result>
+            <result name="input">/index.jsp</result>
         </action>
     </package>
 </struts>
