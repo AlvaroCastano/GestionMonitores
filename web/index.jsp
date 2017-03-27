@@ -26,11 +26,11 @@
                             </div>
                             <div class="panel-body">
                                 <br/>
-                                <label for="inputEmail" class="sr-only">Email address</label>
-                                <input type="email" name="user.email" id="email" class="form-control" placeholder="Email address" required autofocus>
+                                <label for="inputEmail" class="sr-only" id="email">Email address</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
                                 <br/>
-                                <label for="inputPassword" class="sr-only">Password</label>
-                                <input type="password" name="user.pwd" id="password" class="form-control" placeholder="Password" required>
+                                <label for="inputPassword" class="sr-only" id="pwd">Password</label>
+                                <input type="password" name="pwd" id="password" class="form-control" placeholder="Password" required>
                                 <br/>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                             </div>

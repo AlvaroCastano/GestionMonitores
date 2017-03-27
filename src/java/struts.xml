@@ -5,7 +5,8 @@
 <struts>
     <package name="default" extends="struts-default">
         <action name="login" class="com.dao.gestionmonitores.LoginAction">
-            <result name="success">/vistas/GUIDocente.jsp</result>
+            <result name="Docente">/vistas/GUIDocente.jsp</result>
+            <result name="Estudiante">/vistas/GUIEstudiante.jsp</result>
             <result name="input">/index.jsp</result>
         </action>
     </package>

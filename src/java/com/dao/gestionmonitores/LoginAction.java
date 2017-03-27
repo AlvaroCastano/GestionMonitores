@@ -1,30 +1,28 @@
 package com.dao.gestionmonitores;
 
 import com.entidades.gestionmonitores.TblDocentes;
+import com.entidades.gestionmonitores.TblEstudiantes;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {
 
     private static final long serialVersionUID = 1L;
-    UsuarioDAO dao = new UsuarioDAO();
+    private String pwd,email;
+    DocenteDAO docDao = new DocenteDAO();
+    EstudianteDAO estDao = new EstudianteDAO();
     TblDocentes docente;
-
-    @Override
-    public void validate() {
-        if (docente.getEmail().length() == (0)) {
-            this.addFieldError("docente.email", "email is required");
-        }
-        if (docente.getPwd().length() == (0)) {
-            this.addFieldError("docente.pwd", "Password is required");
-        }
-    }
+    TblEstudiantes estudiante;
 
     @Override
     public String execute() {
-        if (dao.find(docente.getEmail(), docente.getPwd())) {
-            return SUCCESS;
+        if (docDao.buscar(docente.getEmail(), docente.getPwd())) {
+            return "Docente";
         } else {
-            this.addActionError("Invalid username and password");
+            if (estDao.buscar(estudiante.getEmail(), estudiante.getPwd())) {
+                return "Estudiante";
+            } else {
+                this.addActionError("Invalid username and password");
+            }
         }
         return INPUT;
     }
@@ -37,4 +35,3 @@ public class LoginAction extends ActionSupport {
         this.docente = docente;
     }
 }
-

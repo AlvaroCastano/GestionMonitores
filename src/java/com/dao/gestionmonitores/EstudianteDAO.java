@@ -9,12 +9,12 @@ import org.hibernate.Session;
  *
  * @author Alvaro
  */
-public class UsuarioDAO {
+public class EstudianteDAO {
 
-    public boolean find(String email, String pwd) {
+    public boolean buscar(String email, String pwd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         //session.beginTransaction();
-        String sql = "from TblDocentes u where u.email=:email and u.pwd=:pwd";
+        String sql = "from TblEstudiantes e where e.email=:email and e.pwd=:pwd";
         Query query = session.createQuery(sql);
         query.setParameter("email", email);
         query.setParameter("pwd", pwd);

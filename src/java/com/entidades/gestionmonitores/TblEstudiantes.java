@@ -15,7 +15,7 @@ public class TblEstudiantes  implements java.io.Serializable {
      private String apellido;
      private String email;
      private Date fechaNacimiento;
-     private String password;
+     private String pwd;
      private String telefono;
      private String direccion;
 
@@ -23,21 +23,21 @@ public class TblEstudiantes  implements java.io.Serializable {
     }
 
 	
-    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String password) {
+    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String pwd) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
-        this.password = password;
+        this.pwd = pwd;
     }
-    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String password, String telefono, String direccion) {
+    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String pwd, String telefono, String direccion) {
        this.cedula = cedula;
        this.nombre = nombre;
        this.apellido = apellido;
        this.email = email;
        this.fechaNacimiento = fechaNacimiento;
-       this.password = password;
+       this.pwd = pwd;
        this.telefono = telefono;
        this.direccion = direccion;
     }
@@ -77,12 +77,12 @@ public class TblEstudiantes  implements java.io.Serializable {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-    public String getPassword() {
-        return this.password;
+    public String getPwd() {
+        return this.pwd;
     }
     
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
     public String getTelefono() {
         return this.telefono;
@@ -98,10 +98,6 @@ public class TblEstudiantes  implements java.io.Serializable {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
-
-
-
 }
 
 
