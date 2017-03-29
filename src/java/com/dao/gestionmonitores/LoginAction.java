@@ -15,6 +15,14 @@ public class LoginAction extends ActionSupport {
 
     @Override
     public String execute() {
+        docente = new TblDocentes();
+        docente.setEmail(email);
+        docente.setPwd(pwd);
+        
+        estudiante = new TblEstudiantes();
+        estudiante.setEmail(email);
+        estudiante.setPwd(pwd);
+        
         if (docDao.buscar(docente.getEmail(), docente.getPwd())) {
             return "Docente";
         } else {
@@ -27,11 +35,18 @@ public class LoginAction extends ActionSupport {
         return INPUT;
     }
 
-    public TblDocentes getUser() {
+    public void setEmail(String email){
+        this.email = email;
+    }
+    public void setPwd(String pwd){
+        this.pwd = pwd;
+    }
+    
+    public TblDocentes getDocente() {
         return docente;
     }
-
-    public void setUser(TblDocentes docente) {
-        this.docente = docente;
+    
+    public TblEstudiantes getEstudiante() {
+        return estudiante;
     }
 }
