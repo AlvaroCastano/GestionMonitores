@@ -1,11 +1,9 @@
 package com.dao.gestionmonitores;
 
-import com.entidades.gestionmonitores.TblDocentes;
 import com.entidades.gestionmonitores.TblEstudiantes;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 /**
  *
