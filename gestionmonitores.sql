@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2017 a las 05:34:19
+-- Tiempo de generación: 01-04-2017 a las 04:20:02
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -35,15 +35,16 @@ CREATE TABLE `tbl_docentes` (
   `fechaNacimiento` date DEFAULT NULL,
   `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `pwd` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `perfil` char(1) NOT NULL DEFAULT 'd'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbl_docentes`
 --
 
-INSERT INTO `tbl_docentes` (`cedula`, `nombre`, `apellidos`, `telefono`, `direccion`, `fechaNacimiento`, `email`, `pwd`) VALUES
-('0987654321', 'Jorge Iván', 'Meza Martinez', NULL, NULL, NULL, 'jorge.m@autonoma.edu.co', '123'),
-('1234567890', 'Sandra', 'Victoria Hurtado', NULL, NULL, NULL, 'sandra.v@autonoma.edu.co', '123');
+INSERT INTO `tbl_docentes` (`cedula`, `nombre`, `apellidos`, `telefono`, `direccion`, `fechaNacimiento`, `email`, `pwd`, `perfil`) VALUES
+('0987654321', 'Jorge Iván', 'Meza Martinez', NULL, NULL, NULL, 'jorge.m@autonoma.edu.co', '123', 'd'),
+('1234567890', 'Sandra', 'Victoria Hurtado', NULL, NULL, NULL, 'sandra.v@autonoma.edu.co', '123', 'd');
 
 -- --------------------------------------------------------
 
@@ -59,17 +60,39 @@ CREATE TABLE `tbl_estudiantes` (
   `fechaNacimiento` date NOT NULL,
   `pwd` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `telefono` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `direccion` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+  `direccion` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `monitor` tinyint(1) NOT NULL DEFAULT '0',
+  `perfil` char(1) NOT NULL DEFAULT 'e'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbl_estudiantes`
 --
 
-INSERT INTO `tbl_estudiantes` (`cedula`, `nombre`, `apellido`, `email`, `fechaNacimiento`, `pwd`, `telefono`, `direccion`) VALUES
-('12345', 'Alvaro', 'Castaño', 'alvaro@hot.com', '2013-05-05', '123', '8882040', 'la Cumbre'),
-('1234567890', 'Yasmin', 'Montoya', 'yasmin@hot.com', '2017-04-23', '123', '8883066', 'Malabar'),
-('67890', 'Ruby', 'Lopez', 'ruby@hot.com', '1995-01-16', '123', '8883066', 'Camilo torres');
+INSERT INTO `tbl_estudiantes` (`cedula`, `nombre`, `apellido`, `email`, `fechaNacimiento`, `pwd`, `telefono`, `direccion`, `monitor`, `perfil`) VALUES
+('12345', 'Alvaro', 'Castaño', 'alvaro@hot.com', '2013-05-05', '123', '8882040', 'la Cumbre', 0, 'e'),
+('1234567890', 'Yasmin', 'Montoya', 'yasmin@hot.com', '2017-04-23', '123', '8883066', 'Malabar', 0, 'e'),
+('67890', 'Ruby', 'Lopez', 'ruby@hot.com', '1995-01-16', '123', '8883066', 'Camilo torres', 0, 'e');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_materias`
+--
+
+CREATE TABLE `tbl_materias` (
+  `codigo` varchar(5) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_materias`
+--
+
+INSERT INTO `tbl_materias` (`codigo`, `nombre`) VALUES
+('12345', 'Ingenieria de Software II'),
+('12346', 'Sistemas Distribuidos'),
+('12347', 'Enfasis');
 
 --
 -- Índices para tablas volcadas
@@ -90,6 +113,12 @@ ALTER TABLE `tbl_estudiantes`
   ADD PRIMARY KEY (`cedula`),
   ADD UNIQUE KEY `cedula` (`cedula`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indices de la tabla `tbl_materias`
+--
+ALTER TABLE `tbl_materias`
+  ADD PRIMARY KEY (`codigo`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
