@@ -11,8 +11,10 @@
         <meta charset=UTF-8">
         <title>Docente</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="../css/cssInicial.css" rel="stylesheet" type="text/css"/>
-        <script src="../js/alertas.js"></script>
+        <link href="${pageContext.request.contextPath}/css/cssInicial.css" rel="stylesheet" type="text/css"/>
+        
+        <script src="${pageContext.request.contextPath}/js/jquery-3.2.0.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/alertas.js"></script>
     </head>
     <body>
         <div class="col-lg-6 col-sm-6">
