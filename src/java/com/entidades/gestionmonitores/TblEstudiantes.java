@@ -1,5 +1,5 @@
 package com.entidades.gestionmonitores;
-// Generated 26-mar-2017 15:10:33 by Hibernate Tools 4.3.1
+// Generated 03-abr-2017 20:46:03 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -18,20 +18,24 @@ public class TblEstudiantes  implements java.io.Serializable {
      private String pwd;
      private String telefono;
      private String direccion;
+     private boolean monitor;
+     private char perfil;
 
     public TblEstudiantes() {
     }
 
 	
-    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String pwd) {
+    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String pwd, boolean monitor, char perfil) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
         this.pwd = pwd;
+        this.monitor = monitor;
+        this.perfil = perfil;
     }
-    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String pwd, String telefono, String direccion) {
+    public TblEstudiantes(String cedula, String nombre, String apellido, String email, Date fechaNacimiento, String pwd, String telefono, String direccion, boolean monitor, char perfil) {
        this.cedula = cedula;
        this.nombre = nombre;
        this.apellido = apellido;
@@ -40,6 +44,8 @@ public class TblEstudiantes  implements java.io.Serializable {
        this.pwd = pwd;
        this.telefono = telefono;
        this.direccion = direccion;
+       this.monitor = monitor;
+       this.perfil = perfil;
     }
    
     public String getCedula() {
@@ -98,6 +104,24 @@ public class TblEstudiantes  implements java.io.Serializable {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+    public boolean isMonitor() {
+        return this.monitor;
+    }
+    
+    public void setMonitor(boolean monitor) {
+        this.monitor = monitor;
+    }
+    public char getPerfil() {
+        return this.perfil;
+    }
+    
+    public void setPerfil(char perfil) {
+        this.perfil = perfil;
+    }
+
+
+
+
 }
 
 

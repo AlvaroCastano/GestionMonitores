@@ -47,6 +47,9 @@ Contributor(s):
     <property name="hibernate.connection.username">admin</property>
     <property name="hibernate.connection.password">admin</property>
     <mapping resource="com/entidades/gestionmonitores/TblDocentes.hbm.xml"/>
+    <mapping resource="com/entidades/gestionmonitores/TblMaterias.hbm.xml"/>
+    <mapping resource="com/entidades/gestionmonitores/TblEstudiantemateria.hbm.xml"/>
     <mapping resource="com/entidades/gestionmonitores/TblEstudiantes.hbm.xml"/>
+    <mapping resource="com/entidades/gestionmonitores/TblDocentemateria.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

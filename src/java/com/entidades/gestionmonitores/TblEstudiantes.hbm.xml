@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 26-mar-2017 15:10:35 by Hibernate Tools 4.3.1 -->
+<!-- Generated 03-abr-2017 20:46:06 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.entidades.gestionmonitores.TblEstudiantes" table="tbl_estudiantes" catalog="gestionmonitores" optimistic-lock="version">
         <id name="cedula" type="string">
@@ -28,6 +28,12 @@
         </property>
         <property name="direccion" type="string">
             <column name="direccion" length="50" />
+        </property>
+        <property name="monitor" type="boolean">
+            <column name="monitor" not-null="true" />
+        </property>
+        <property name="perfil" type="char">
+            <column name="perfil" length="1" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>
