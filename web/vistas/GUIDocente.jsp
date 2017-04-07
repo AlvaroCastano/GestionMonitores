@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,13 +13,14 @@
         <title>Docente</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="${pageContext.request.contextPath}/css/cssInicial.css" rel="stylesheet" type="text/css"/>
-        
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="${pageContext.request.contextPath}/js/jquery-3.2.0.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/alertas.js"></script>
     </head>
     <body>
-        <div class="col-lg-6 col-sm-6">
-            
+        <div class="col-md-6 col-md-offset-3">
+
             <div class="card hovercard">
                 <div class="card-background">
                     <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
@@ -30,7 +32,7 @@
                 <div class="card-info"> <span class="card-title">Pamela Anderson</span>
                 </div>
             </div>
-            
+
             <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
                 <div class="btn-group" role="group">
                     <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -63,6 +65,9 @@
                 </div>
             </div>
         </div>
-            
-    </body>
+
+    <s:form action="cargarmaterias" method="post">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Listar</button>
+    </s:form>
+</body>
 </html>

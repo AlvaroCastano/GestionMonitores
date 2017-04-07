@@ -51,10 +51,6 @@ public class TblDocentemateria  implements java.io.Serializable {
     public void setMateriaCodigo(String materiaCodigo) {
         this.materiaCodigo = materiaCodigo;
     }
-
-
-
-
 }
 
 

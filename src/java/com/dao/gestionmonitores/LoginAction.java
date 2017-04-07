@@ -34,6 +34,13 @@ public class LoginAction extends ActionSupport {
         }
         return INPUT;
     }
+    
+    public String listar() {        
+        System.out.println(docente.getCedula());
+        
+            return SUCCESS;
+        
+    }
 
     public void setEmail(String email){
         this.email = email;

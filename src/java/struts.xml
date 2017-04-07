@@ -9,5 +9,8 @@
             <result name="Estudiante">/vistas/GUIEstudiante.jsp</result>
             <result name="input">/index.jsp</result>
         </action>
+        <action name="cargarmaterias" class="com.dao.gestionmonitores.LoginAction" method="listar">
+            <result name="success">/vistas/GUIDocente.jsp</result>
+        </action>
     </package>
 </struts>
