@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-04-2017 a las 04:20:02
--- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 5.6.30
+-- Tiempo de generación: 08-04-2017 a las 07:03:26
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `gestionmonitores`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_docentemateria`
+--
+
+CREATE TABLE `tbl_docentemateria` (
+  `id` int(11) NOT NULL,
+  `docente_cedula` varchar(10) NOT NULL,
+  `estudiante_cedula` varchar(10) NOT NULL,
+  `materia_codigo` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_docentemateria`
+--
+
+INSERT INTO `tbl_docentemateria` (`id`, `docente_cedula`, `estudiante_cedula`, `materia_codigo`) VALUES
+(1, '0987654321', '', '12346'),
+(2, '0987654321', '', '12347'),
+(3, '1234567890', '', '12345');
 
 -- --------------------------------------------------------
 
@@ -44,7 +66,7 @@ CREATE TABLE `tbl_docentes` (
 
 INSERT INTO `tbl_docentes` (`cedula`, `nombre`, `apellidos`, `telefono`, `direccion`, `fechaNacimiento`, `email`, `pwd`, `perfil`) VALUES
 ('0987654321', 'Jorge Iván', 'Meza Martinez', NULL, NULL, NULL, 'jorge.m@autonoma.edu.co', '123', 'd'),
-('1234567890', 'Sandra', 'Victoria Hurtado', NULL, NULL, NULL, 'sandra.v@autonoma.edu.co', '123', 'd');
+('1234567890', 'Sandra', 'Victoria Hurtado', NULL, NULL, NULL, 'sandra.h@autonoma.edu.co', '123', 'd');
 
 -- --------------------------------------------------------
 
@@ -99,6 +121,13 @@ INSERT INTO `tbl_materias` (`codigo`, `nombre`) VALUES
 --
 
 --
+-- Indices de la tabla `tbl_docentemateria`
+--
+ALTER TABLE `tbl_docentemateria`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
 -- Indices de la tabla `tbl_docentes`
 --
 ALTER TABLE `tbl_docentes`
@@ -120,6 +149,15 @@ ALTER TABLE `tbl_estudiantes`
 ALTER TABLE `tbl_materias`
   ADD PRIMARY KEY (`codigo`);
 
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_docentemateria`
+--
+ALTER TABLE `tbl_docentemateria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
