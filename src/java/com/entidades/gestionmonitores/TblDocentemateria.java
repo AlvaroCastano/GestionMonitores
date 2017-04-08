@@ -51,6 +51,12 @@ public class TblDocentemateria  implements java.io.Serializable {
     public void setMateriaCodigo(String materiaCodigo) {
         this.materiaCodigo = materiaCodigo;
     }
+
+    @Override
+    public String toString() {
+        return "TblDocentemateria{" + "id=" + id + ", docenteCedula=" + docenteCedula + ", estudianteCedula=" + estudianteCedula + ", materiaCodigo=" + materiaCodigo + '}';
+    }
+    
 }
 
 

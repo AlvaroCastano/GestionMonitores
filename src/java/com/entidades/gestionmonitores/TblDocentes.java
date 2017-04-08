@@ -108,8 +108,12 @@ public class TblDocentes  implements java.io.Serializable {
         this.perfil = perfil;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "TblDocentes{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", direccion=" + direccion + ", fechaNacimiento=" + fechaNacimiento + ", email=" + email + ", pwd=" + pwd + ", perfil=" + perfil + '}';
+    }
+    
+    
 
 }
 

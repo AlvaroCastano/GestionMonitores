@@ -11,19 +11,19 @@ import org.hibernate.Session;
  */
 public class DocenteDAO {
 
-    public boolean buscar(String email, String pwd) {
+    public TblDocentes buscar(String email, String pwd) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         //session.beginTransaction();
         String sql = "from TblDocentes d where d.email=:email and d.pwd=:pwd";
         Query query = session.createQuery(sql);
         query.setParameter("email", email);
         query.setParameter("pwd", pwd);
-        List<TblDocentes> list = query.list();
-        if (list.size() > 0) {
+        TblDocentes docente = (TblDocentes) query.uniqueResult();
+        if (docente!=null) {
             session.close();
-            return true;
+            return  docente;
         }
         session.close();
-        return false;
+        return null;
     }
 }

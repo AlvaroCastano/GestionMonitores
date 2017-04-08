@@ -35,8 +35,13 @@ public class TblMaterias  implements java.io.Serializable {
         this.nombre = nombre;
     }
 
+    @Override
+    public String toString() {
+        return "TblMaterias{" + "codigo=" + codigo + ", nombre=" + nombre + '}';
+    }
 
 
+    
 
 }
 
