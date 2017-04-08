@@ -20,6 +20,7 @@ public class CargarMateriasAction extends ActionSupport {
     private String docenteNombre;
     private String docenteApellidos;
     private TblDocentes docente;
+    private List<TblMaterias> materias;
     
 
     @Override
@@ -32,11 +33,7 @@ public class CargarMateriasAction extends ActionSupport {
         List<TblDocentemateria> codigosMaterias = matDao.listarMaterias(docenteCedula);
         for (int i = 0; i < codigosMaterias.size(); i++) {
             String codigo = codigosMaterias.get(i).getMateriaCodigo();
-            List<TblMaterias> materias = matDao.buscarMateria(codigo);
-            for (int j = 0; j < materias.size(); j++) {
-                this.nombreMateria = materias.get(j).getNombre();
-            }
-
+            this.materias = matDao.buscarMateria(codigo);     
         }
         return SUCCESS;
 
@@ -56,6 +53,10 @@ public class CargarMateriasAction extends ActionSupport {
 
     public String getDocenteApellidos() {
         return docenteApellidos;
+    }
+
+    public List<TblMaterias> getMaterias() {
+        return materias;
     }
     
     

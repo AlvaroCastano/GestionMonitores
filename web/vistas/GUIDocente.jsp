@@ -23,12 +23,13 @@
             <div class="card hovercard">
                 <div class="card-background">
                     <img class="card-bkimg" alt="" src="">
-                    
+
                 </div>
                 <div class="useravatar">
                     <img alt="" src="${pageContext.request.contextPath}/img/docente.png">
                 </div>
                 <div class="card-info"> <span class="card-title"><s:property value="docente.nombre" /></span>
+
                 </div>
             </div>
 
@@ -53,30 +54,32 @@
             <div class="well">
                 <div class="tab-content">
                     <div class="tab-pane fade in " id="tab1">                       
-                        <h3>This is tab 1</h3>
+                        <h3>Perfil</h3>
                     </div>
-                    
+
                     <div class="tab-pane fade in active" id="tab2" type="submit">
                         <s:form action="cargarmaterias" method="post">
                             <s:hidden name="docenteCedula" value="%{docente.cedula}"></s:hidden>
                             <s:hidden name="docenteNombre" value="%{docente.nombre}"></s:hidden>
                             <s:hidden name="docenteNombre" value="%{docente.apellidos}"></s:hidden>
-                            <button class="btn btn-primary" type="submit">Listar</button>
-                            <br/>
-                            <br/>
-                            <p>Materia: <s:property value="nombreMateria" /></p>
+                                <button class="btn btn-primary" type="submit">Listar</button>
+                                <br/>
+                                <br/>
+
+                            <s:iterator value="materias" >
+                                <p>Materia: <s:property value="nombre" /></p>
+                            </s:iterator>
+
                         </s:form>
-                        
-                        
                     </div>
-                     
+
                     <div class="tab-pane fade in" id="tab3">
-                        <h3>This is tab 3</h3>
+                        <h3>Reuniones</h3>
                     </div>
                 </div>
             </div>
         </div>
 
-    
-</body>
+
+    </body>
 </html>
