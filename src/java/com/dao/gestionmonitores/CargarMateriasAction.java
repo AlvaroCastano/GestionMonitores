@@ -4,6 +4,7 @@ import com.entidades.gestionmonitores.TblDocentemateria;
 import com.entidades.gestionmonitores.TblDocentes;
 import com.entidades.gestionmonitores.TblMaterias;
 import com.opensymphony.xwork2.ActionSupport;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class CargarMateriasAction extends ActionSupport {
     private String docenteNombre;
     private String docenteApellidos;
     private TblDocentes docente;
-    private List<TblMaterias> materias;
+    private ArrayList<TblMaterias> materias;
     
 
     @Override
@@ -29,12 +30,15 @@ public class CargarMateriasAction extends ActionSupport {
         docente.setCedula(this.docenteCedula);
         docente.setNombre(this.docenteNombre);
         docente.setApellidos(this.docenteApellidos);
+        this.materias = new ArrayList<>();
         
         List<TblDocentemateria> codigosMaterias = matDao.listarMaterias(docenteCedula);
+
         for (int i = 0; i < codigosMaterias.size(); i++) {
             String codigo = codigosMaterias.get(i).getMateriaCodigo();
-            this.materias = matDao.buscarMateria(codigo);     
+            this.materias.add(matDao.buscarMateria(codigo).get(0));
         }
+        
         return SUCCESS;
 
     }
@@ -58,11 +62,11 @@ public class CargarMateriasAction extends ActionSupport {
     public List<TblMaterias> getMaterias() {
         return materias;
     }
-    
+
     
 
     public void setDocenteCedula(String docenteCedula) {
         this.docenteCedula = docenteCedula;
-    }
+}
 
 }

@@ -57,18 +57,23 @@
                         <h3>Perfil</h3>
                     </div>
 
-                    <div class="tab-pane fade in active" id="tab2" type="submit">
+                    <div class="tab-pane fade in active" id="tab2">
                         <s:form action="cargarmaterias" method="post">
                             <s:hidden name="docenteCedula" value="%{docente.cedula}"></s:hidden>
                             <s:hidden name="docenteNombre" value="%{docente.nombre}"></s:hidden>
-                            <s:hidden name="docenteNombre" value="%{docente.apellidos}"></s:hidden>
+                            <s:hidden name="docenteApellidos" value="%{docente.apellidos}"></s:hidden>
                                 <button class="btn btn-primary" type="submit">Listar</button>
                                 <br/>
                                 <br/>
 
-                            <s:iterator value="materias" >
-                                <p>Materia: <s:property value="nombre" /></p>
-                            </s:iterator>
+                            
+                                <div class="list-group">
+                                    <a class="list-group-item disabled">Materias</a>
+                                    <s:iterator value="materias" >
+                                    <a href="#" class="list-group-item"><s:property value="nombre" /></a>
+                                    </s:iterator>
+                                </div>
+                            
 
                         </s:form>
                     </div>
