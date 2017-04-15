@@ -26,4 +26,19 @@ public class DocenteDAO {
         session.close();
         return null;
     }
+    
+    public TblDocentes buscarPorCedula(String cedula) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        //session.beginTransaction();
+        String sql = "from TblDocentes d where d.cedula=:cedula";
+        Query query = session.createQuery(sql);
+        query.setParameter("cedula", cedula);
+        TblDocentes docente = (TblDocentes) query.uniqueResult();
+        if (docente!=null) {
+            session.close();
+            return  docente;
+        }
+        session.close();
+        return null;
+    }
 }

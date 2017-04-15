@@ -16,22 +16,12 @@ public class CargarMateriasAction extends ActionSupport {
     private static final long serialVersionUID = 1L;
     private MateriaDAO matDao = new MateriaDAO();
     private TblDocentemateria docentemat;
-    private String nombreMateria;
     private String docenteCedula;
-    private String docenteNombre;
-    private String docenteApellidos;
-    private TblDocentes docente;
-    private ArrayList<TblMaterias> materias;
+    private ArrayList<TblMaterias> materias = new ArrayList<>();
     
 
     @Override
-    public String execute() {
-        docente= new TblDocentes();
-        docente.setCedula(this.docenteCedula);
-        docente.setNombre(this.docenteNombre);
-        docente.setApellidos(this.docenteApellidos);
-        this.materias = new ArrayList<>();
-        
+    public String execute() {       
         List<TblDocentemateria> codigosMaterias = matDao.listarMaterias(docenteCedula);
 
         for (int i = 0; i < codigosMaterias.size(); i++) {
@@ -43,27 +33,13 @@ public class CargarMateriasAction extends ActionSupport {
 
     }
 
-    public String getNombreMateria() {
-        return nombreMateria;
-    }
-
     public String getDocenteCedula() {
         return docenteCedula;
-    }
-
-    public String getDocenteNombre() {
-        return docenteNombre;
-    }
-
-    public String getDocenteApellidos() {
-        return docenteApellidos;
     }
 
     public List<TblMaterias> getMaterias() {
         return materias;
     }
-
-    
 
     public void setDocenteCedula(String docenteCedula) {
         this.docenteCedula = docenteCedula;

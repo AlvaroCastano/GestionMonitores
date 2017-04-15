@@ -53,28 +53,61 @@
 
             <div class="well">
                 <div class="tab-content">
-                    <div class="tab-pane fade in " id="tab1">                       
-                        <h3>Perfil</h3>
+                    <div class="tab-pane fade in" id="tab1">
+                        <div class="list-group">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Datos Personales</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cedula</td>
+                                    <td><s:property value="docente.cedula" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td><s:property value="docente.nombre" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Apellidos</td>
+                                    <td><s:property value="docente.apellidos" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Telefono</td>
+                                    <td><s:property value="docente.telefono" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Direccion</td>
+                                    <td><s:property value="docente.direccion" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Fecha de Nacimiento</td>
+                                    <td><s:property value="docente.fechaNacimiento" /></td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail</td>
+                                    <td><s:property value="docente.email" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                                </div>
                     </div>
 
-                    <div class="tab-pane fade in active" id="tab2">
+                    <div class="tab-pane fade in active" id="tab2" >
                         <s:form action="cargarmaterias" method="post">
                             <s:hidden name="docenteCedula" value="%{docente.cedula}"></s:hidden>
-                            <s:hidden name="docenteNombre" value="%{docente.nombre}"></s:hidden>
-                            <s:hidden name="docenteApellidos" value="%{docente.apellidos}"></s:hidden>
                                 <button class="btn btn-primary" type="submit">Listar</button>
                                 <br/>
                                 <br/>
-
-                            
                                 <div class="list-group">
                                     <a class="list-group-item disabled">Materias</a>
-                                    <s:iterator value="materias" >
+                                <s:iterator value="materias" >
                                     <a href="#" class="list-group-item"><s:property value="nombre" /></a>
-                                    </s:iterator>
+                                </s:iterator>
                                 </div>
-                            
-
                         </s:form>
                     </div>
 

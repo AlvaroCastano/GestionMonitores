@@ -3,10 +3,7 @@ package com.dao.gestionmonitores;
 import com.entidades.gestionmonitores.TblDocentemateria;
 import com.entidades.gestionmonitores.TblDocentes;
 import com.entidades.gestionmonitores.TblEstudiantes;
-import com.entidades.gestionmonitores.TblMaterias;
-import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
-import java.util.List;
 
 public class LoginAction extends ActionSupport {
 
