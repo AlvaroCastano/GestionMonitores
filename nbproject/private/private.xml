@@ -3,22 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/CargarMateriasAction.java</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/LoginAction.java</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/struts.xml</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/DocenteDAO.java</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblDocentemateria.java</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblDocentes.java</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/HibernateUtil.java</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/web/index.jsp</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblDocentemateria.hbm.xml</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/MateriaDAO.java</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/web/vistas/GUIEstudiante.jsp</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/EstudianteDAO.java</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblDocentes.hbm.xml</file>
+            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/DocenteDAO.java</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/web/vistas/GUIDocente.jsp</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblMaterias.java</file>
         </group>
     </open-files>
 </project-private>
