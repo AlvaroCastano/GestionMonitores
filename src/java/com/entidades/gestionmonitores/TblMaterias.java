@@ -11,13 +11,15 @@ public class TblMaterias  implements java.io.Serializable {
 
      private String codigo;
      private String nombre;
+     private boolean estado;
 
     public TblMaterias() {
     }
 
-    public TblMaterias(String codigo, String nombre) {
+    public TblMaterias(String codigo, String nombre,boolean estado) {
        this.codigo = codigo;
        this.nombre = nombre;
+       this.estado= estado;
     }
    
     public String getCodigo() {
@@ -35,9 +37,17 @@ public class TblMaterias  implements java.io.Serializable {
         this.nombre = nombre;
     }
 
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
-        return "TblMaterias{" + "codigo=" + codigo + ", nombre=" + nombre + '}';
+        return "TblMaterias{" + "codigo=" + codigo + ", nombre=" + nombre + ", estado=" + estado + '}';
     }
 
 
