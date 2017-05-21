@@ -5,6 +5,8 @@ import com.entidades.gestionmonitores.TblMaterias;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 /**
  *
  * @author Alvaro
@@ -41,4 +43,14 @@ public class MateriaDAO {
         return null;
     }
     
+    public void actualizarMateria(String codigo, String estado) {
+        Session session = HibernateUtil.getSessionFactory().openSession();  
+        System.out.println(codigo + " "+ estado);
+        
+        String sql = "update TblMaterias m set m.estado=:estado where m.codigo=:codigo";
+        Query query = session.createQuery(sql);
+        query.setParameter("codigo", codigo);
+        query.setParameter("estado", estado);
+        session.close();
+    }
 }
