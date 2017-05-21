@@ -103,7 +103,7 @@
                             <a class="list-group-item disabled">Materias</a>
                             <s:iterator value="materias" >
                                 <a href="#" class="list-group-item"><s:property value="nombre" />
-                                    <input type="checkbox" id="nombre" name="check" value="<s:property value="codigo" />"class="custom-control-input" checked></a>
+                                    <input type="checkbox" id="estado" name="codigo" value="<s:property value="codigo" />" class="custom-control-input"></a>
                                 </s:iterator>
                         </div>
                         <button class="btn btn-primary" type="submit">Postular</button>
