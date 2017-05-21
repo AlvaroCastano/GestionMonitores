@@ -9,7 +9,7 @@
             <generator class="identity" />
         </id>
         <property name="materiaCodigo" type="string">
-            <column name="materia_codigo" length="10" not-null="true" />
+            <column name="materia_codigo" length="5" not-null="true" />
         </property>
         <property name="estudianteCedula" type="string">
             <column name="estudiante_cedula" length="10" not-null="true" />

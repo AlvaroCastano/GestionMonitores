@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2017 a las 07:03:26
+-- Tiempo de generación: 22-05-2017 a las 00:26:45
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -71,6 +71,28 @@ INSERT INTO `tbl_docentes` (`cedula`, `nombre`, `apellidos`, `telefono`, `direcc
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tbl_estudiantemateria`
+--
+
+CREATE TABLE `tbl_estudiantemateria` (
+  `id` int(11) NOT NULL,
+  `estudiante_cedula` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `materia_codigo` varchar(5) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `nota` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_estudiantemateria`
+--
+
+INSERT INTO `tbl_estudiantemateria` (`id`, `estudiante_cedula`, `materia_codigo`, `nota`) VALUES
+(1, '67890', '12346', 4),
+(2, '13579', '12345', 4),
+(3, '12345', '12346', 4);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tbl_estudiantes`
 --
 
@@ -92,9 +114,9 @@ CREATE TABLE `tbl_estudiantes` (
 --
 
 INSERT INTO `tbl_estudiantes` (`cedula`, `nombre`, `apellido`, `email`, `fechaNacimiento`, `pwd`, `telefono`, `direccion`, `monitor`, `perfil`) VALUES
-('12345', 'Alvaro', 'Castaño', 'alvaro@hot.com', '2013-05-05', '123', '8882040', 'la Cumbre', 0, 'e'),
-('1234567890', 'Yasmin', 'Montoya', 'yasmin@hot.com', '2017-04-23', '123', '8883066', 'Malabar', 0, 'e'),
-('67890', 'Ruby', 'Lopez', 'ruby@hot.com', '1995-01-16', '123', '8883066', 'Camilo torres', 0, 'e');
+('12345', 'Alvaro', 'Castaño', 'alvaro@gmail.com', '2013-05-05', '123', '8882040', 'la Cumbre', 0, 'e'),
+('13579', 'Yasmin', 'Montoya', 'yasmin@gmail.com', '2017-04-23', '123', '8883066', 'Malabar', 0, 'e'),
+('67890', 'Ruby', 'Lopez', 'ruby@gmail.com', '1995-01-16', '123', '8883066', 'Camilo torres', 0, 'e');
 
 -- --------------------------------------------------------
 
@@ -104,17 +126,18 @@ INSERT INTO `tbl_estudiantes` (`cedula`, `nombre`, `apellido`, `email`, `fechaNa
 
 CREATE TABLE `tbl_materias` (
   `codigo` varchar(5) NOT NULL,
-  `nombre` varchar(50) NOT NULL
+  `nombre` varchar(50) NOT NULL,
+  `estado` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tbl_materias`
 --
 
-INSERT INTO `tbl_materias` (`codigo`, `nombre`) VALUES
-('12345', 'Ingenieria de Software II'),
-('12346', 'Sistemas Distribuidos'),
-('12347', 'Enfasis');
+INSERT INTO `tbl_materias` (`codigo`, `nombre`, `estado`) VALUES
+('12345', 'Ingenieria de Software II', 1),
+('12346', 'Sistemas Distribuidos', 1),
+('12347', 'Enfasis', 0);
 
 --
 -- Índices para tablas volcadas
@@ -134,6 +157,12 @@ ALTER TABLE `tbl_docentes`
   ADD PRIMARY KEY (`cedula`),
   ADD UNIQUE KEY `cedula` (`cedula`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indices de la tabla `tbl_estudiantemateria`
+--
+ALTER TABLE `tbl_estudiantemateria`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `tbl_estudiantes`
@@ -157,7 +186,12 @@ ALTER TABLE `tbl_materias`
 -- AUTO_INCREMENT de la tabla `tbl_docentemateria`
 --
 ALTER TABLE `tbl_docentemateria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `tbl_estudiantemateria`
+--
+ALTER TABLE `tbl_estudiantemateria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

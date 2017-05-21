@@ -9,8 +9,5 @@
             <result name="Estudiante">/vistas/GUIEstudiante.jsp</result>
             <result name="input">/index.jsp</result>
         </action>
-        <action name="postular" class="com.dao.gestionmonitores.PostularAction">
-            <result name="Docente">/vistas/GUIDocente.jsp</result>
-        </action>
     </package>
 </struts>
