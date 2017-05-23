@@ -105,11 +105,6 @@
                             
                         </div>
                         <button class="btn btn-primary" type="submit">Postularme</button>
-                   
-                    </div>
-
-                    <div class="tab-pane fade in" id="tab3">
-                        <h3>Reuniones</h3>
                     </div>
                 </div>
             </div>

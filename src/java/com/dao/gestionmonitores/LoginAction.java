@@ -39,8 +39,11 @@ public class LoginAction extends ActionSupport {
 
             for (int i = 0; i < materiasDocente.size(); i++) {
                 String codigo = materiasDocente.get(i).getMateriaCodigo();
-                this.materias.add(matDao.buscarMateria(codigo).get(0));
+                if(matDao.buscarMateria(codigo).get(0).isEstado()==false){
+                    this.materias.add(matDao.buscarMateria(codigo).get(0));
+                }   
             }
+            
             return "Docente";
         } else {
             if (estDao.buscar(estudiante.getEmail(), estudiante.getPwd()) !=null) {

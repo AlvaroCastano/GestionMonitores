@@ -103,15 +103,39 @@
                             <a class="list-group-item disabled">Materias</a>
                             <s:iterator value="materias" >
                                 <a href="#" class="list-group-item"><s:property value="nombre" />
-                                    <input type="checkbox" id="estado" name="codigo" value="<s:property value="codigo" />" class="custom-control-input"></a>
-                                </s:iterator>
+                                <input type="checkbox" id="estado" name="codigo" value="<s:property value="codigo" />" class="custom-control-input"></a>
+                            </s:iterator>
                         </div>
                         <button class="btn btn-primary" type="submit">Postular</button>
                         </s:form>
                     </div>
 
                     <div class="tab-pane fade in" id="tab3">
-                        <h3>Reuniones</h3>
+                       <div class="form-group">
+                            <label class="control-label">Materia</label>
+                            <select class="form-control">
+                                <s:iterator value="materias" >
+                                    <option value="<s:property value="codigo" />"><s:property value="nombre" /></option>
+                                </s:iterator>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Tema</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Fecha</label>
+                            <input type="date" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Hora</label>
+                            <input type="time" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Aula</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Crear</button>
                     </div>
                 </div>
             </div>
