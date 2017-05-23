@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2017 a las 00:26:45
+-- Tiempo de generación: 23-05-2017 a las 21:56:58
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -40,7 +40,8 @@ CREATE TABLE `tbl_docentemateria` (
 INSERT INTO `tbl_docentemateria` (`id`, `docente_cedula`, `estudiante_cedula`, `materia_codigo`) VALUES
 (1, '0987654321', '', '12346'),
 (2, '0987654321', '', '12347'),
-(3, '1234567890', '', '12345');
+(3, '1234567890', '', '12345'),
+(4, '0987654321', '', '12349');
 
 -- --------------------------------------------------------
 
@@ -65,8 +66,8 @@ CREATE TABLE `tbl_docentes` (
 --
 
 INSERT INTO `tbl_docentes` (`cedula`, `nombre`, `apellidos`, `telefono`, `direccion`, `fechaNacimiento`, `email`, `pwd`, `perfil`) VALUES
-('0987654321', 'Jorge Iván', 'Meza Martinez', NULL, NULL, NULL, 'jorge.m@autonoma.edu.co', '123', 'd'),
-('1234567890', 'Sandra', 'Victoria Hurtado', NULL, NULL, NULL, 'sandra.h@autonoma.edu.co', '123', 'd');
+('0987654321', 'Jorge Iván', 'Meza Martinez', '89836746', 'calle 67 # 78-23', '2017-03-13', 'jorge.m@autonoma.edu.co', '123', 'd'),
+('1234567890', 'Sandra', 'Victoria Hurtado', '87354637', 'calle 56 # 05-87', '2017-03-22', 'sandra.h@autonoma.edu.co', '123', 'd');
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,8 @@ CREATE TABLE `tbl_materias` (
 INSERT INTO `tbl_materias` (`codigo`, `nombre`, `estado`) VALUES
 ('12345', 'Ingenieria de Software II', 1),
 ('12346', 'Sistemas Distribuidos', 1),
-('12347', 'Enfasis', 0);
+('12347', 'Enfasis', 0),
+('12349', 'Bases de datos', 0);
 
 --
 -- Índices para tablas volcadas
@@ -186,7 +188,7 @@ ALTER TABLE `tbl_materias`
 -- AUTO_INCREMENT de la tabla `tbl_docentemateria`
 --
 ALTER TABLE `tbl_docentemateria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tbl_estudiantemateria`
 --

@@ -93,18 +93,17 @@
                     </div>
 
                     <div class="tab-pane fade in active" id="tab2" >
-                        
-                        <div class="list-group">
-                            <a class="list-group-item disabled">Materias Ofertadas</a>
-                            
+                        <s:form class="form-signin" action="postular" method="post">
+                            <div class="list-group">
+                                <a class="list-group-item disabled">Materias Ofertadas</a>
                                 <s:iterator value="materias" >
                                     <a href="#" class="list-group-item"><s:property value="nombre" />
                                         <input type="checkbox" id="nombre" class="custom-control-input">
                                     </a>
                                 </s:iterator>
-                            
-                        </div>
-                        <button class="btn btn-primary" type="submit">Postularme</button>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Postularme</button>
+                        </s:form>
                     </div>
                 </div>
             </div>

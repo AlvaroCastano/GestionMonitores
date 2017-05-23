@@ -12,5 +12,8 @@
         <action name="ofertar" class="com.dao.gestionmonitores.OfertarAction">
             <result name="success">/vistas/GUIDocente.jsp</result>
         </action>
+        <action name="postular" class="com.dao.gestionmonitores.PostularAction">
+            <result name="success">/vistas/GUIDocente.jsp</result>
+        </action>
     </package>
 </struts>
