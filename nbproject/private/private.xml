@@ -5,12 +5,14 @@
         <group>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/LoginAction.java</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/web/index.jsp</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/struts.xml</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/DocenteDAO.java</file>
+            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/web/vistas/GUIEstudiante.jsp</file>
+            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/EstudianteDAO.java</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblDocentes.hbm.xml</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblDocentemateria.java</file>
             <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/entidades/gestionmonitores/TblEstudiantemateria.hbm.xml</file>
-            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/OfertarAction.java</file>
+            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/web/vistas/GUIDocente.jsp</file>
+            <file>file:/C:/Users/Lorena/Documents/GestionMonitores/src/java/com/dao/gestionmonitores/HibernateUtil.java</file>
         </group>
     </open-files>
 </project-private>
